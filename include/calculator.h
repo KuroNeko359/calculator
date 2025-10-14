@@ -13,11 +13,27 @@ enum operator {
     DIVIDE = '/'
 };
 
+enum bracket {
+    LEFT_PARENTHESIS,
+    LEFT_SQUARE_BRACKET,
+    LEFT_CURLY_BRACKET,
+    RIGHT_PARENTHESIS,
+    RIGHT_SQUARE_BRACKET,
+    RIGHT_CURLY_BRACKET,
+    INVALID_BRACKET
+};
+
+enum bracket bracket_parse_char(char str);
+
+bool bracket_is_match(enum bracket left_bracket, enum bracket right_bracket);
+
+bool bracket_match(char *str1);
+
 /**
  * Input a postfix express, calculating its value.
  * @param str Input a postfix expression.
  */
-void calculate(char * str);
+int calculate(char * str);
 
 bool is_operand(char str);
 

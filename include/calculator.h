@@ -41,4 +41,6 @@ bool is_operator(char str);
 
 char *parse_string(char *str);
 
+int parse_string2int(char *str, int start, int end);
+
 #endif //CALCULATOR_CALCULATOR_H
